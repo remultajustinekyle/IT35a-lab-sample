@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     legacy()
   ],
-  base:"it35a-lab",
+  base:"it35a-lab-sample",
   test: {
     globals: true,
     environment: 'jsdom',
