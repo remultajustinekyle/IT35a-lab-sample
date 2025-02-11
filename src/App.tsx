@@ -25,9 +25,6 @@ import '@ionic/react/css/display.css';
  * For more info, please see:
  * https://ionicframework.com/docs/theming/dark-mode
  */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
 import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
@@ -39,10 +36,13 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path=" /IT35a-lab-sample/home ">
-        <Home />
-        </Route>
+        {/* Define the route for the Home component */}
         <Route exact path="/IT35a-lab-sample/home">
+          <Home />
+        </Route>
+        
+        {/* Redirect if the path is incorrect or should lead to /home */}
+        <Route exact path="/">
           <Redirect to="/IT35a-lab-sample/home" />
         </Route>
       </IonRouterOutlet>
